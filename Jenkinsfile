@@ -10,8 +10,8 @@ node {
       }
 
       stage('Push image') {
-           docker.withRegistry('https://registery.hub.docker.com', 'clay_docker_hub') {
-               app.push('latest')
+           docker.withRegistry('https://registry.hub.docker.com', 'clay_docker_hub') {
+               app.push("latest")
            }
       }
 }
