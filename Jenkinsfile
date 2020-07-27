@@ -5,7 +5,7 @@ node {
           checkout scm
       }
 
-      stage 'Build Image' {
+      stage ('Build Image') {
            app = docker.build('shroderdog/exampleapp")
       }
 
