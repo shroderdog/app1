@@ -9,6 +9,12 @@ node {
            app = docker.build("shroderdog/exampleapp")
       }
 
+      stage('Test JS') {
+           app.inside {
+                    sh 'npm test'
+           }
+      }
+
       stage('Push image') {
            docker.withRegistry('', 'clay_docker_hub') {
                app.push("latest")
