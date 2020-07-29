@@ -1,5 +1,6 @@
 node {
   try  {
+        knox is a dick
 	def app
 		stage('Clone Repository') {
 			checkout scm
